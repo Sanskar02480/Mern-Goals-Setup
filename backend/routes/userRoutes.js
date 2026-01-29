@@ -1,10 +1,15 @@
+
+
 const express =require('express')
 const router =express.Router()
 
-const{registerUser} =require('../controllers/userController')
+const{registerUser ,LoginUser ,ShowUser} =require('../controllers/userController')
 
 
 router.post('/',registerUser)
 
+router.get('/login',LoginUser)
 
-mosule .exports =router
+router.get('/Profile',ShowUser)
+
+module.exports =router
